@@ -1,7 +1,7 @@
 namespace devices;
 
 // light class now abstract and inherited by concrete lights in the factories
-public abstract class Light : Device, ILight
+public abstract class Light : Device
 {
 
     public bool On {get; private set;} = false;

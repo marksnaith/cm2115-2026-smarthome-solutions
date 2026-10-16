@@ -1,6 +1,6 @@
 ﻿namespace devices;
 
-public abstract class SmartPlug : Device, ISmartPlug
+public abstract class SmartPlug : Device
 {
     public void SwitchOn()
     {

@@ -1,6 +1,6 @@
 namespace devices;
 
-public abstract class Thermostat : Device, IThermostat
+public abstract class Thermostat : Device
 {
 
     private int temperature = 15;
