@@ -2,5 +2,6 @@
 
 public interface IDim
 {
-
+    void DimUp();
+    void DimDown();
 }

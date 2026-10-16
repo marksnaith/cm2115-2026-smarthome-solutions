@@ -1,6 +1,6 @@
 ﻿namespace devices;
 
-public class SmartPlug : Device, ISwitch
+public abstract class SmartPlug : Device, ISmartPlug
 {
     public void SwitchOn()
     {
@@ -11,5 +11,4 @@ public class SmartPlug : Device, ISwitch
     {
         Console.WriteLine("Smart plug switched off");
     }
-
 }

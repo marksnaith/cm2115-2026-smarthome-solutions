@@ -1,6 +1,6 @@
 namespace devices;
 
-public class Thermostat : Device, IAdjust
+public abstract class Thermostat : Device, IThermostat
 {
 
     private int temperature = 15;
@@ -18,4 +18,5 @@ public class Thermostat : Device, IAdjust
         this.status = "Temperature is set to " + temperature;
         Console.WriteLine("Thermostate turned down");
     }
+
 }

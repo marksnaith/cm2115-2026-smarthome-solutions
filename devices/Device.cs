@@ -12,4 +12,6 @@ public abstract class Device
     {
         this.status = "Unknown";
     }
+
+    public abstract string GetManufacturer();
 }
