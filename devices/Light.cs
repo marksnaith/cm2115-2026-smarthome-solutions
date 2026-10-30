@@ -1,7 +1,9 @@
+using cm2115_2026_smarthome;
+
 namespace devices;
 
 // light class now abstract and inherited by concrete lights in the factories
-public abstract class Light : Device
+public abstract class Light : Device, ILightObserver
 {
 
     public bool On {get; private set;} = false;
@@ -48,5 +50,22 @@ public abstract class Light : Device
     public void DimDown()
     {
         this.Level--;
+    }
+
+    public override void Accept(IDeviceVisitor visitor)
+    {
+        visitor.Visit(this);
+    }
+
+    public void Update(int level)
+    {
+        if(level < 5)
+        {
+            this.SwitchOn();
+        }
+        else
+        {
+            this.SwitchOff();
+        }
     }
 }

@@ -1,3 +1,5 @@
+using cm2115_2026_smarthome;
+
 namespace devices.speakers;
 
 public class Speaker : Device, ISwitch, IPlay // extend device but also implements ISwitch because we can switch on and off
@@ -36,5 +38,15 @@ public class Speaker : Device, ISwitch, IPlay // extend device but also implemen
     public void SwitchOff()
     {
         this.powerAdapter.SwitchOff();
+    }
+
+    public override string GetManufacturer()
+    {
+        return "";
+    }
+
+    public override void Accept(IDeviceVisitor visitor)
+    {
+        visitor.Visit(this);
     }
 }

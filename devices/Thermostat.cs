@@ -1,3 +1,5 @@
+using cm2115_2026_smarthome;
+
 namespace devices;
 
 public abstract class Thermostat : Device
@@ -19,4 +21,8 @@ public abstract class Thermostat : Device
         Console.WriteLine("Thermostate turned down");
     }
 
+    public override void Accept(IDeviceVisitor visitor)
+    {
+        visitor.Visit(this);
+    }
 }

@@ -1,3 +1,5 @@
+using cm2115_2026_smarthome;
+
 namespace devices;
 
 public abstract class Device
@@ -14,4 +16,5 @@ public abstract class Device
     }
 
     public abstract string GetManufacturer();
+    public abstract void Accept(IDeviceVisitor visitor);
 }
